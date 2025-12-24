@@ -51,6 +51,35 @@
     .step-card:hover {
       transform: scale(1.02);
     }
+    
+    .stat-card {
+      transition: all 0.3s ease;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-4px);
+    }
+    
+    .testimonial-card {
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    
+    .faq-item {
+      transition: all 0.3s ease;
+    }
+    
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
   </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
@@ -171,6 +200,45 @@
       </div>
      </div>
     </div>
+   </section><!-- Statistics Section -->
+   <section class="py-16 px-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Platform Impact</h2>
+     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <div class="stat-card">
+       <div class="text-4xl md:text-5xl font-bold mb-2">
+        50K+
+       </div>
+       <div class="text-lg text-blue-100">
+        Active Employees
+       </div>
+      </div>
+      <div class="stat-card">
+       <div class="text-4xl md:text-5xl font-bold mb-2">
+        85%
+       </div>
+       <div class="text-lg text-blue-100">
+        Time Saved
+       </div>
+      </div>
+      <div class="stat-card">
+       <div class="text-4xl md:text-5xl font-bold mb-2">
+        24/7
+       </div>
+       <div class="text-lg text-blue-100">
+        Availability
+       </div>
+      </div>
+      <div class="stat-card">
+       <div class="text-4xl md:text-5xl font-bold mb-2">
+        100%
+       </div>
+       <div class="text-lg text-blue-100">
+        Paperless
+       </div>
+      </div>
+     </div>
+    </div>
    </section><!-- Benefits Section -->
    <section class="py-16 px-4 bg-blue-50">
     <div class="max-w-6xl mx-auto">
@@ -214,6 +282,96 @@
        <div>
         <h3 class="text-xl font-bold text-gray-800 mb-2">Secure Employee Data</h3>
         <p class="text-gray-600">Bank-level security ensures your personal and professional data is protected.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Testimonials Section -->
+   <section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">What Employees Say</h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8"><!-- Testimonial 1 -->
+      <div class="testimonial-card bg-gray-50 p-6 rounded-xl shadow-md">
+       <div class="flex items-center mb-4">
+        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
+         RK
+        </div>
+        <div class="ml-3">
+         <div class="font-bold text-gray-800">
+          Rajesh Kumar
+         </div>
+         <div class="text-sm text-gray-600">
+          Senior Clerk
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-600 italic">"e-Karamchari has made leave applications so much easier. I can now apply and track everything from my phone!"</p>
+      </div><!-- Testimonial 2 -->
+      <div class="testimonial-card bg-gray-50 p-6 rounded-xl shadow-md">
+       <div class="flex items-center mb-4">
+        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
+         PS
+        </div>
+        <div class="ml-3">
+         <div class="font-bold text-gray-800">
+          Priya Sharma
+         </div>
+         <div class="text-sm text-gray-600">
+          Assistant Engineer
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-600 italic">"Getting salary slips instantly without visiting the office is a game-changer. Very convenient system!"</p>
+      </div><!-- Testimonial 3 -->
+      <div class="testimonial-card bg-gray-50 p-6 rounded-xl shadow-md">
+       <div class="flex items-center mb-4">
+        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
+         AV
+        </div>
+        <div class="ml-3">
+         <div class="font-bold text-gray-800">
+          Amit Verma
+         </div>
+         <div class="text-sm text-gray-600">
+          Department Head
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-600 italic">"The approval process is now transparent and efficient. Great initiative by MCD for digital transformation!"</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- FAQ Section -->
+   <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">Frequently Asked Questions</h2>
+     <div class="space-y-4"><!-- FAQ 1 -->
+      <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"><button class="faq-question w-full text-left px-6 py-4 font-semibold text-gray-800 hover:bg-gray-50 transition flex justify-between items-center"> <span>How do I access my account?</span>
+        <svg class="w-5 h-5 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg></button>
+       <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+        You can access your account by clicking the "Employee Login" button and entering your employee ID and password provided by your department.
+       </div>
+      </div><!-- FAQ 2 -->
+      <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"><button class="faq-question w-full text-left px-6 py-4 font-semibold text-gray-800 hover:bg-gray-50 transition flex justify-between items-center"> <span>Can I access e-Karamchari from my mobile?</span>
+        <svg class="w-5 h-5 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg></button>
+       <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+        Yes, e-Karamchari is fully responsive and can be accessed from any device including smartphones and tablets.
+       </div>
+      </div><!-- FAQ 3 -->
+      <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"><button class="faq-question w-full text-left px-6 py-4 font-semibold text-gray-800 hover:bg-gray-50 transition flex justify-between items-center"> <span>How long does it take for leave approval?</span>
+        <svg class="w-5 h-5 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg></button>
+       <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+        Leave approvals typically take 24-48 hours. You can track the status in real-time through your dashboard.
+       </div>
+      </div><!-- FAQ 4 -->
+      <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"><button class="faq-question w-full text-left px-6 py-4 font-semibold text-gray-800 hover:bg-gray-50 transition flex justify-between items-center"> <span>Is my data secure on this platform?</span>
+        <svg class="w-5 h-5 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg></button>
+       <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+        Yes, e-Karamchari uses bank-level encryption and follows government security standards to protect all employee data.
        </div>
       </div>
      </div>
@@ -451,6 +609,27 @@
         }
       });
     });
+    
+    // FAQ accordion functionality
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', function() {
+        const faqItem = this.closest('.faq-item');
+        const answer = faqItem.querySelector('.faq-answer');
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('.faq-answer').classList.add('hidden');
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+          faqItem.classList.add('active');
+          answer.classList.remove('hidden');
+        }
+      });
+    });
 
     // Initialize SDK
     if (window.elementSdk) {
@@ -462,5 +641,5 @@
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b2bcc7581a2a834',t:'MTc2NjUzNDIxOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b2be0086218a834',t:'MTc2NjUzNTAyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
