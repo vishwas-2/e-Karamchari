@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>e-Karamchari — Employee Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Employee Self-Service Portal for the Municipal Corporation of Delhi (MCD)">
+    <link rel="stylesheet" href="frontend/css/login.css">
+</head>
+
+<body class="h-full">
+
+    <div class="wrap" role="main">
+        <div class="illustration" aria-hidden="false">
+            <div class="scene">
+                <!-- Inline SVG illustrating a government employee using a digital system -->
+                <svg viewBox="0 0 800 520" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <rect x="0" y="0" width="800" height="520" rx="20" fill="#f7f9ff" />
+                    <g transform="translate(80,50)">
+                        <rect x="0" y="0" width="360" height="240" rx="12" fill="#ffffff" stroke="#e6e9ee" />
+                        <rect x="16" y="20" width="328" height="28" rx="6" fill="#eef6ff" />
+                        <rect x="16" y="64" width="300" height="10" rx="4" fill="#dbeafe" />
+                        <rect x="16" y="84" width="240" height="10" rx="4" fill="#dbeafe" />
+
+                        <g transform="translate(260,120)">
+                            <rect x="0" y="0" width="80" height="40" rx="8" fill="#0b67ff" />
+                        </g>
+
+                        <!-- person -->
+                        <g transform="translate(60,132)">
+                            <circle cx="40" cy="40" r="36" fill="#ffd59a" />
+                            <rect x="10" y="78" width="60" height="42" rx="10" fill="#2f3d5a" />
+                            <rect x="48" y="88" width="40" height="20" rx="6" fill="#0b67ff" />
+                        </g>
+
+                    </g>
+
+                    <!-- Small shield lock at top-right -->
+                    <g transform="translate(620,28)">
+                        <rect x="0" y="0" width="140" height="120" rx="12" fill="#eaf2ff" />
+                        <path d="M70 30c-10 0-18 8-18 18v10h36V48c0-10-8-18-18-18z" fill="#0b67ff" />
+                        <rect x="48" y="70" width="44" height="12" rx="6" fill="#a7c4ff" />
+                    </g>
+                </svg>
+
+                <div style="margin-top:16px;">
+                    <h2>Digital services for MCD employees</h2>
+                    <p>Access payslips, leave requests, updates, and HR services securely from one portal.</p>
+                </div>
+            </div>
+        </div>
+
+        <aside class="card" aria-labelledby="loginHeading">
+            <a href="index.html" class="back-btn" aria-label="Back to Home">&larr; Back to Home</a>
+
+            <div class="brand" aria-hidden="false">
+                <div class="logo">e-Karamchari</div>
+                <div style="font-size:12px;color:var(--muted);">Employee Self-Service Portal</div>
+            </div>
+
+            <p class="subtitle">Secure sign-in for Municipal Corporation of Delhi staff</p>
+
+            <h1 id="loginHeading" style="font-size:16px;margin:6px 0 12px 0;">Login to your account</h1>
+
+            <form id="loginForm" action="#" method="post" novalidate>
+                <div class="field">
+                    <label for="username">Employee ID / Username</label>
+                    <input id="username" name="username" type="text" inputmode="text" autocomplete="username" required
+                        placeholder="e.g., EMP12345" aria-label="Employee ID or Username">
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div style="display:flex;gap:8px;align-items:center">
+                        <input id="password" name="password" type="password" autocomplete="current-password" required
+                            placeholder="Enter your password" style="flex:1" aria-describedby="pwdHelp">
+                        <button type="button" id="togglePwd" aria-pressed="false" title="Show password"
+                            style="background:transparent;border:none;cursor:pointer;color:var(--blue);font-weight:600">Show</button>
+                    </div>
+                    <div id="pwdHelp" class="small">Keep your password safe. Never share it.</div>
+                </div>
+
+                <div class="field">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required aria-label="Select role">
+                        <option value="">Select role</option>
+                        <option value="employee">Employee</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+
+                <div class="actions">
+                    <div class="small"><label style="font-weight:600"><input type="checkbox" name="remember"
+                                style="margin-right:8px"> Remember me</label></div>
+                    <div><a class="link" href="#">Forgot Password?</a></div>
+                </div>
+
+                <div style="margin-top:8px;display:flex;gap:12px;align-items:center">
+                    <button class="btn-primary" type="submit">Login Securely</button>
+                    <div class="secure-note" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5 3.8 9.8 9 11 5.2-1.2 9-6 9-11V5l-9-4z" fill="#0b67ff"
+                                opacity="0.12" />
+                            <path d="M12 3.2L5 6v5.8c0 4.2 3 8 7 9.2 4-1.2 7-5 7-9.2V6l-7-2.8z" fill="#0b67ff" />
+                            <path d="M12 10.5a1.8 1.8 0 100-3.6 1.8 1.8 0 000 3.6z" fill="#fff" />
+                        </svg>
+                        <div>Secure connection</div>
+                    </div>
+                </div>
+
+                <footer class="small-note">By logging in you agree to follow MCD IT policies and keep credentials
+                    confidential.</footer>
+            </form>
+        </aside>
+    </div>
+
+    <script src="frontend/js/login.js" defer></script>
+</body>
+
+</html>
